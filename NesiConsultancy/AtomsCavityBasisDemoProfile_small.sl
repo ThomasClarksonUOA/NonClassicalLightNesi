@@ -6,6 +6,6 @@
 
 module purge
 module load Python
-python -m cProfile -o output.pstats AtomsCavityBasisDemo.py -c config.ini
+python -m cProfile -o output.pstats AtomsCavityBasisDemo.py -c ./Configs/smallconfig.ini
 gprof2dot --colour-nodes-by-selftime -f pstats output.pstats | \
-    dot -Tpng -o output.png
+    dot -Tpng -o output_small.png
